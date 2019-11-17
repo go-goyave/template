@@ -5,6 +5,7 @@
 *.dylib
 
 *.out
+config.json
 
 .idea/
 .vscode/
