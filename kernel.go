@@ -1,7 +1,7 @@
 package main
 
 import (
-	"goyave_template/http/routes"
+	"goyave_template/http/route"
 
 	"github.com/System-Glitch/goyave"
 
@@ -18,5 +18,5 @@ func main() {
 	// if you are running multiple services, such as a
 	// websocket server, you'll need to run Goyave in a routine.
 	// See: https://system-glitch.github.io/goyave/guide/advanced/multi-services.html
-	goyave.Start(routes.Register)
+	goyave.Start(route.Register)
 }
