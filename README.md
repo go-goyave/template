@@ -26,12 +26,12 @@ Goyave is a progressive and accessible web application framework, aimed at makin
         </td>
         <td valign="top">
             <h3>Powerful functionalities</h3>
-            <p>Goyave is accessible, yet powerful. The frameworks includes routing, request parsing, validation, localization, and more!</p>
+            <p>Goyave is accessible, yet powerful. The framework includes routing, request parsing, validation, localization, and more!</p>
         </td>
     </tr>
 </table>
 
-Most golang frameworks for web development don't have a strong directory structure nor conventions to make applications have a uniform architecture and limit redundancy. This makes it difficult to work with them on different projects. In companies, having a well-defined and documented architecture helps new developers integrate projects faster, and reduces the time needed for maintaining them. For open source projets, it helps newcomers understanding the project and makes it easier to contribute.
+Most golang frameworks for web development don't have a strong directory structure nor conventions to make applications have a uniform architecture and limit redundancy. This makes it difficult to work with them on different projects. In companies, having a well-defined and documented architecture helps new developers integrate projects faster, and reduces the time needed for maintaining them. For open source projects, it helps newcomers understanding the project and makes it easier to contribute.
 
 ## Getting Started
 
