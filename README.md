@@ -37,7 +37,7 @@ Most golang frameworks for web development don't have a strong directory structu
 
 ### Install using the template project
 
-You can bootstrap your project using the **[Goyave template project](https://github.com/System-Glitch/goyave-template)**.
+You can bootstrap your project using the [Goyave template project](https://github.com/System-Glitch/goyave-template). This project has a complete directory structure already set up for you.
 
 Run the install script:
 ```
@@ -67,10 +67,6 @@ func main() {
 }
 ```
 
-### Scaffolding
-
-You can bootstrap your project using the [Goyave template project](https://github.com/System-Glitch/goyave-template). This project has a complete directory structure already set up for you. Follow the **[installation instructions](https://system-glitch.github.io/goyave/guide/installation#template-project)** and start building awesome applications!
-
 ## Learning Goyave
 
 The Goyave framework has an extensive documentation covering in-depth subjects and teaching you how to run a project using Goyave from setup to deployment.
@@ -93,6 +89,12 @@ You can support also me on Patreon:
 <a href="https://www.patreon.com/bePatron?u=25997573">
 	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
 </a>
+
+### Contributors
+
+A big "Thank you" to the Goyave contributors:
+
+- [Kuinox](https://github.com/Kuinox) (Powershell install script
 
 ## License
 
