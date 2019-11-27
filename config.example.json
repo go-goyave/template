@@ -5,6 +5,8 @@
     "port": 8080,
     "httpsPort": 8081,
     "protocol": "http",
+    "tlsCert": "",
+    "tlsKey": "",
     "debug": true,
     "timeout": 10,
     "maxUploadSize": 10,
