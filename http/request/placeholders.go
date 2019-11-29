@@ -11,7 +11,7 @@ package requests
 // Placeholders are replacer functions. These functions should return the value to replace the placeholder with.
 // Learn more about placeholders here: https://system-glitch.github.io/goyave/guide/basics/validation.html#placeholders
 
-// import "github.com/System-Glitch/goyave/validation"
+// import "github.com/System-Glitch/goyave/v2/validation"
 
 // func simpleParameterPlaceholder(field string, rule string, parameters []string, language string) string {
 // 	return parameters[0]

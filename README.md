@@ -26,19 +26,44 @@ Goyave is a progressive and accessible web application framework, aimed at makin
         </td>
         <td valign="top">
             <h3>Powerful functionalities</h3>
-            <p>Goyave is accessible, yet powerful. The frameworks includes routing, request parsing, validation, localization, and more!</p>
+            <p>Goyave is accessible, yet powerful. The framework includes routing, request parsing, validation, localization, and more!</p>
         </td>
     </tr>
 </table>
 
-Most golang frameworks for web development don't have a strong directory structure nor conventions to make applications have a uniform architecture and limit redundancy. This makes it difficult to work with them on different projects. In companies, having a well-defined and documented architecture helps new developers integrate projects faster, and reduces the time needed for maintaining them. For open source projets, it helps newcomers understanding the project and makes it easier to contribute.
+Most golang frameworks for web development don't have a strong directory structure nor conventions to make applications have a uniform architecture and limit redundancy. This makes it difficult to work with them on different projects. In companies, having a well-defined and documented architecture helps new developers integrate projects faster, and reduces the time needed for maintaining them. For open source projects, it helps newcomers understanding the project and makes it easier to contribute.
 
 ## Getting Started
 
-The example belows shows a basic `Hello world` application using Goyave.
+### Install using the template project
+
+You can bootstrap your project using the [Goyave template project](https://github.com/System-Glitch/goyave-template). This project has a complete directory structure already set up for you.
+
+#### Linux / MacOS
+
+```
+$ curl https://raw.githubusercontent.com/System-Glitch/goyave/master/install.sh | bash -s my-project
+```
+
+#### Windows (Powershell)
+
+```
+> & ([scriptblock]::Create((curl "https://raw.githubusercontent.com/System-Glitch/goyave/master/install.ps1").Content)) -projectName my-project
+```
+
+---
+
+Run `go run my-project` in your project's directory to start the server, then try to request the `hello` route.
+```
+$ curl http://localhost:8080/hello
+Hi!
+```
+
+### Hello world from scratch
+The example below shows a basic `Hello world` application using Goyave.
 
 ``` go
-import "github.com/System-Glitch/goyave"
+import "github.com/System-Glitch/goyave/v2"
 
 func registerRoutes(router *goyave.Router) {
 	router.Route("GET", "/hello", func(response *goyave.Response, request *goyave.Request) {
@@ -50,10 +75,6 @@ func main() {
 	goyave.Start(registerRoutes)
 }
 ```
-
-### Scaffolding
-
-You can bootstrap your project using the [Goyave template project](https://github.com/System-Glitch/goyave-template). This project has a complete directory structure already set up for you. Follow the **[installation instructions](https://system-glitch.github.io/goyave/guide/installation#template-project)** and start building awesome applications!
 
 ## Learning Goyave
 
@@ -77,6 +98,12 @@ You can support also me on Patreon:
 <a href="https://www.patreon.com/bePatron?u=25997573">
 	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
 </a>
+
+### Contributors
+
+A big "Thank you" to the Goyave contributors:
+
+- [Kuinox](https://github.com/Kuinox) (Powershell install script
 
 ## License
 

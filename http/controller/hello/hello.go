@@ -3,7 +3,7 @@ package hello
 import (
 	"net/http"
 
-	"github.com/System-Glitch/goyave"
+	"github.com/System-Glitch/goyave/v2"
 )
 
 // Controllers are files containing a collection of Handlers related to a specific feature.
@@ -30,5 +30,5 @@ func SayHi(response *goyave.Response, request *goyave.Request) {
 // Echo is a controller handler writing the input field "text" as a response.
 // This route is validated. See "http/request/echorequest/echo.go" for more details.
 func Echo(response *goyave.Response, request *goyave.Request) {
-	response.String(http.StatusOK, request.Data["text"].(string))
+	response.String(http.StatusOK, request.String("text"))
 }

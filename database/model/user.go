@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/System-Glitch/goyave/database"
+	"github.com/System-Glitch/goyave/v2/database"
 	"github.com/jinzhu/gorm"
 )
 
