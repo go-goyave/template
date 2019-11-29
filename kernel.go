@@ -3,7 +3,7 @@ package main
 import (
 	"goyave_template/http/route"
 
-	"github.com/System-Glitch/goyave"
+	"github.com/System-Glitch/goyave/v2"
 
 	// Import the approriate GORM dialect for the database you're using.
 	_ "github.com/jinzhu/gorm/dialects/mysql"

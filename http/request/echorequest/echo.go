@@ -1,6 +1,6 @@
 package echorequest
 
-import "github.com/System-Glitch/goyave/validation"
+import "github.com/System-Glitch/goyave/v2/validation"
 
 // Goyave provides a powerful, yet easy way to validate all incoming data, no matter
 // its type or its format, thanks to a large number of validation rules.

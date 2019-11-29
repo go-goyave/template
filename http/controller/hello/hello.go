@@ -3,7 +3,7 @@ package hello
 import (
 	"net/http"
 
-	"github.com/System-Glitch/goyave"
+	"github.com/System-Glitch/goyave/v2"
 )
 
 // Controllers are files containing a collection of Handlers related to a specific feature.

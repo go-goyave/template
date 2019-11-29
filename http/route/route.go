@@ -4,7 +4,7 @@ import (
 	"goyave_template/http/controller/hello"
 	"goyave_template/http/request/echorequest"
 
-	"github.com/System-Glitch/goyave"
+	"github.com/System-Glitch/goyave/v2"
 )
 
 // Routing is an essential part of any Goyave application.
