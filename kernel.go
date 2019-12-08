@@ -4,12 +4,11 @@ import (
 	"goyave_template/http/route"
 
 	"github.com/System-Glitch/goyave/v2"
-
 	// Import the approriate GORM dialect for the database you're using.
-	_ "github.com/jinzhu/gorm/dialects/mysql"
-	// import _ "github.com/jinzhu/gorm/dialects/postgres"
-	// import _ "github.com/jinzhu/gorm/dialects/sqlite"
-	// import _ "github.com/jinzhu/gorm/dialects/mssql"
+	// _ "github.com/jinzhu/gorm/dialects/mysql"
+	// _ "github.com/jinzhu/gorm/dialects/postgres"
+	// _ "github.com/jinzhu/gorm/dialects/sqlite"
+	// _ "github.com/jinzhu/gorm/dialects/mssql"
 )
 
 func main() {

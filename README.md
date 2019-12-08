@@ -60,6 +60,7 @@ Hi!
 ```
 
 ### Hello world from scratch
+
 The example below shows a basic `Hello world` application using Goyave.
 
 ``` go
@@ -103,8 +104,9 @@ You can support also me on Patreon:
 
 A big "Thank you" to the Goyave contributors:
 
-- [Kuinox](https://github.com/Kuinox) (Powershell install script
+- [Kuinox](https://github.com/Kuinox) (Powershell install script)
+- [Alexandre GV.](https://github.com/alexandregv) (Install script MacOS compatibility)
 
 ## License
 
-The Goyave framework is MIT Licensed. Copyright © 2019 Jérémy LAMBERT (SystemGlitch) 
+The Goyave framework is MIT Licensed. Copyright © 2019 Jérémy LAMBERT (SystemGlitch)
