@@ -1,7 +1,8 @@
-package models
+package model
 
 import (
 	"github.com/System-Glitch/goyave/v2/database"
+	"github.com/bxcodec/faker/v3"
 	"github.com/jinzhu/gorm"
 )
 
@@ -22,4 +23,25 @@ type User struct {
 	gorm.Model
 	Name  string `gorm:"type:varchar(100)"`
 	Email string `gorm:"type:varchar(100);unique_index"`
+}
+
+// You may need to test features interacting with your database.
+// Goyave provides a handy way to generate and save records in your database: factories.
+// Factories need a generator function. These functions generate a single random record.
+//
+// "database.Generator" is an alias for "func() interface{}"
+//
+// Learn more here: https://system-glitch.github.io/goyave/guide/advanced/testing.html#database-testing
+
+// UserGenerator generator function for the User model.
+// Generate users using the following:
+//  database.NewFactory(model.UserGenerator).Generate(5)
+func UserGenerator() interface{} {
+	user := &User{}
+	user.Name = faker.Name()
+
+	faker.SetGenerateUniqueValues(true)
+	user.Email = faker.Email()
+	faker.SetGenerateUniqueValues(false)
+	return user
 }
