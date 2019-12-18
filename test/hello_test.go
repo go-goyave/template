@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/System-Glitch/goyave/v2"
-	"github.com/System-Glitch/goyave/validation"
+	"github.com/System-Glitch/goyave/v2/validation"
 )
 
 // Goyave provides an API to ease the unit and functional testing of your application.
@@ -17,7 +17,7 @@ import (
 // - All tests are run using your project's root as working directory.
 //   This directory is determined by the presence of a `go.mod` file.
 // - Config and language files are loaded before the tests start. As the environment is set to `test`,
-//   you **need** a `config.test.json` in the root directory of your project.
+//   you need a `config.test.json` in the root directory of your project.
 //
 // This setup is done by the function `goyave.RunTest`, so you shouldn't run your test suites using testify's `suite.Run()` function.
 //
