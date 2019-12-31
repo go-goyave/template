@@ -5,6 +5,7 @@ import (
 	"goyave_template/http/request/echorequest"
 
 	"github.com/System-Glitch/goyave/v2"
+	"github.com/System-Glitch/goyave/v2/cors"
 )
 
 // Routing is an essential part of any Goyave application.
@@ -17,6 +18,11 @@ import (
 
 // Register all the application routes. This is the main route registrer.
 func Register(router *goyave.Router) {
+
+	// Applying default CORS settings (allow all methods and all origins)
+	// Learn more about CORS options here: https://system-glitch.github.io/goyave/guide/advanced/cors.html
+	router.CORS(cors.Default())
+
 	// Register your routes here
 
 	// Route without validation
