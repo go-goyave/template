@@ -1,6 +1,7 @@
 package main
 
 import (
+	_ "goyave_template/http/request"
 	"goyave_template/http/route"
 
 	"github.com/System-Glitch/goyave/v2"
