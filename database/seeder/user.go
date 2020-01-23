@@ -11,7 +11,7 @@ import (
 // in order to create a full and realistic test environment.
 //
 // Each seeder should have its own file.
-// A seeder's responsabilities are limited to a single table or model.
+// A seeder's responsibilities are limited to a single table or model.
 // For example, the "seeder.User" should only seed the "users" table.
 // Moreover, seeders should have the same name as the model they are using.
 //
