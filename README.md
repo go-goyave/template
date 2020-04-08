@@ -109,13 +109,6 @@ You can support also me on Patreon:
 	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
 </a>
 
-### Contributors
-
-A big "Thank you" to the Goyave contributors:
-
-- [Kuinox](https://github.com/Kuinox) (Powershell install script)
-- [Alexandre GV.](https://github.com/alexandregv) (Install script MacOS compatibility)
-
 ## License
 
 The Goyave framework is MIT Licensed. Copyright © 2019 Jérémy LAMBERT (SystemGlitch)
