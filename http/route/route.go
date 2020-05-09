@@ -26,8 +26,8 @@ func Register(router *goyave.Router) {
 	// Register your routes here
 
 	// Route without validation
-	router.Route("GET", "/hello", hello.SayHi, nil)
+	router.Get("/hello", hello.SayHi, nil)
 
 	// Route with validation
-	router.Route("GET", "/echo", hello.Echo, echorequest.Echo)
+	router.Post("/echo", hello.Echo, echorequest.Echo)
 }
