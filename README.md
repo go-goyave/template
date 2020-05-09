@@ -36,6 +36,11 @@ Most golang frameworks for web development don't have a strong directory structu
 
 ## Getting Started
 
+### Requirements
+
+- Go 1.13+
+- Go modules
+
 ### Install using the template project
 
 You can bootstrap your project using the [Goyave template project](https://github.com/System-Glitch/goyave-template). This project has a complete directory structure already set up for you.
@@ -60,28 +65,10 @@ $ curl http://localhost:8080/hello
 Hi!
 ```
 
-There is also an `echo` route, with basic validation of query parameters.
+There is also an `echo` route, with a basic body validation.
 ```
-$ curl http://localhost:8080/echo?text=abc%20123
+$ curl -H "Content-Type: application/json" -X POST -d '{"text":"abc 123"}' http://localhost:8080/echo
 abc 123
-```
-
-### Hello world from scratch
-
-The example below shows a basic `Hello world` application using Goyave.
-
-``` go
-import "github.com/System-Glitch/goyave/v2"
-
-func registerRoutes(router *goyave.Router) {
-	router.Route("GET", "/hello", func(response *goyave.Response, request *goyave.Request) {
-	    response.String(http.StatusOK, "Hello world!")
-    }, nil)
-}
-
-func main() {
-	goyave.Start(registerRoutes)
-}
 ```
 
 ## Learning Goyave
@@ -91,11 +78,6 @@ The Goyave framework has an extensive documentation covering in-depth subjects a
 <a href="https://system-glitch.github.io/goyave/guide/installation"><h3 align="center">Read the documentation</h3></a>
 
 <a href="https://pkg.go.dev/github.com/System-Glitch/goyave/v2"><h3 align="center">pkg.go.dev</h3></a>
-
-## Requirements
-
-- Go 1.13+
-- Go modules
 
 ## Contributing
 

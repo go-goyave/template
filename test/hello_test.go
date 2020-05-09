@@ -1,6 +1,8 @@
 package test
 
 import (
+	"bytes"
+	"encoding/json"
 	"goyave_template/http/route"
 	"testing"
 
@@ -41,7 +43,7 @@ func (suite *HelloTestSuite) TestHello() {
 
 func (suite *HelloTestSuite) TestEcho() {
 	suite.RunServer(route.Register, func() {
-		resp, err := suite.Get("/echo", nil)
+		resp, err := suite.Post("/echo", nil, nil)
 		suite.Nil(err)
 		suite.NotNil(resp)
 		if resp != nil { // Expect validation errors (field "text" is required)
@@ -56,7 +58,9 @@ func (suite *HelloTestSuite) TestEcho() {
 			}
 		}
 
-		resp, err = suite.Get("/echo?text=hello%20world", nil)
+		headers := map[string]string{"Content-Type": "application/json"}
+		body, _ := json.Marshal(map[string]interface{}{"text": "hello world"})
+		resp, err = suite.Post("/echo", headers, bytes.NewReader(body))
 		suite.Nil(err)
 		suite.NotNil(resp)
 		if resp != nil {
