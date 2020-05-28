@@ -2,7 +2,6 @@ package route
 
 import (
 	"goyave_template/http/controller/hello"
-	"goyave_template/http/request/echorequest"
 
 	"github.com/System-Glitch/goyave/v2"
 	"github.com/System-Glitch/goyave/v2/cors"
@@ -29,5 +28,5 @@ func Register(router *goyave.Router) {
 	router.Get("/hello", hello.SayHi, nil)
 
 	// Route with validation
-	router.Post("/echo", hello.Echo, echorequest.Echo)
+	router.Post("/echo", hello.Echo, hello.EchoRequest)
 }

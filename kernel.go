@@ -1,8 +1,8 @@
 package main
 
 import (
-	_ "goyave_template/http/request"
 	"goyave_template/http/route"
+	_ "goyave_template/http/validation"
 	"os"
 
 	"github.com/System-Glitch/goyave/v2"
