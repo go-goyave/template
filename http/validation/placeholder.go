@@ -1,4 +1,4 @@
-package requests
+package validation
 
 // Validation messages can use placeholders to inject dynamic values in the validation error message. For example, in the rules.json language file:
 //
