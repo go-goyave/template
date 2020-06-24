@@ -1,8 +1,8 @@
 github.com/Code-Hex/uniseg v0.2.0 h1:QB/2UJFvEuRLSZqe+Sb1XQBTWjqGVbZoC6oSWzQRKws=
 github.com/Code-Hex/uniseg v0.2.0/go.mod h1:/ndS2tP+X1lk2HUOcXWGtVTxVq0lWilwgMa4CbzdRsg=
 github.com/PuerkitoBio/goquery v1.5.1/go.mod h1:GsLWisAFVj4WgDibEWF4pvYnkVQBpKBKeU+7zCJoLcc=
-github.com/System-Glitch/goyave/v2 v2.10.2 h1:/5nNxtJgL7YCL9g7IojVkuIbnOJ8BHynM9DDo674AkI=
-github.com/System-Glitch/goyave/v2 v2.10.2/go.mod h1:AL9NCRhAP3u0HnNJAYOenU5PI3Ucd4+veVmKP5aprFM=
+github.com/System-Glitch/goyave/v2 v2.10.2-0.20200624151642-72db46d3a5fd h1:MS6DPAk22FGqtcYyiakVOnqbgV36BUkyr97DG3gdPh4=
+github.com/System-Glitch/goyave/v2 v2.10.2-0.20200624151642-72db46d3a5fd/go.mod h1:AL9NCRhAP3u0HnNJAYOenU5PI3Ucd4+veVmKP5aprFM=
 github.com/andybalholm/cascadia v1.1.0/go.mod h1:GsXiBklL0woXo1j/WYWtSYYC4ouU9PqHO0sqidkEA4Y=
 github.com/bxcodec/faker/v3 v3.3.1 h1:G7uldFk+iO/ES7W4v7JlI/WU9FQ6op9VJ15YZlDEhGQ=
 github.com/bxcodec/faker/v3 v3.3.1/go.mod h1:gF31YgnMSMKgkvl+fyEo1xuSMbEuieyqfeslGYFjneM=
