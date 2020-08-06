@@ -15,10 +15,6 @@ import (
 
 func main() {
 	// This is the entry point of your application.
-	// Most applications don't need more than this, but
-	// if you are running multiple services, such as a
-	// websocket server, you'll need to run Goyave in a routine.
-	// See: https://system-glitch.github.io/goyave/guide/advanced/multi-services.html
 	if err := goyave.Start(route.Register); err != nil {
 		os.Exit(err.(*goyave.Error).ExitCode)
 	}
