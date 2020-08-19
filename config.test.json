@@ -1,27 +1,35 @@
 {
-    "appName": "goyave_template",
-    "environment": "localhost",
-    "domain": "",
-    "maintenance": false,
-    "host": "127.0.0.1",
-    "port": 8080,
-    "httpsPort": 8081,
-    "protocol": "http",
-    "tlsCert": "",
-    "tlsKey": "",
-    "debug": true,
-    "timeout": 10,
-    "maxUploadSize": 10,
-    "defaultLanguage": "en-US",
-    "dbConnection": "none",
-    "dbHost": "127.0.0.1",
-    "dbPort": 3306,
-    "dbName": "goyave",
-    "dbUsername": "root",
-    "dbPassword": "root",
-    "dbOptions": "charset=utf8&parseTime=true&loc=Local",
-    "dbMaxOpenConnections": 20,
-    "dbMaxIdleConnections": 20,
-    "dbMaxLifetime": 300,
-    "dbAutoMigrate": false
+    "app": {
+        "name": "goyave_template",
+        "environment": "test",
+        "debug": false,
+        "defaultLanguage": "en-US"
+    },
+    "server": {
+        "host": "127.0.0.1",
+        "maintenance": false,
+        "protocol": "http",
+        "domain": "",
+        "port": 8080,
+        "httpsPort": 8081,
+        "timeout": 10,
+        "maxUploadSize": 10,
+        "tls": {
+            "cert": "",
+            "key": ""
+        }
+    },
+    "database": {
+        "connection": "none",
+        "host": "127.0.0.1",
+        "port": 3306,
+        "name": "goyave",
+        "username": "root",
+        "password": "root",
+        "options": "charset=utf8&parseTime=true&loc=Local",
+        "maxOpenConnections": 20,
+        "maxIdleConnections": 20,
+        "maxLifetime": 300,
+        "autoMigrate": false
+    }
 }
