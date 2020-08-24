@@ -6,8 +6,8 @@ import (
 	"goyave_template/http/route"
 	"testing"
 
-	"github.com/System-Glitch/goyave/v2"
-	"github.com/System-Glitch/goyave/v2/validation"
+	"github.com/System-Glitch/goyave/v3"
+	"github.com/System-Glitch/goyave/v3/validation"
 )
 
 // Goyave provides an API to ease the unit and functional testing of your application.

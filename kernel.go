@@ -5,7 +5,7 @@ import (
 	_ "goyave_template/http/validation"
 	"os"
 
-	"github.com/System-Glitch/goyave/v2"
+	"github.com/System-Glitch/goyave/v3"
 	// Import the approriate GORM dialect for the database you're using.
 	// _ "github.com/jinzhu/gorm/dialects/mysql"
 	// _ "github.com/jinzhu/gorm/dialects/postgres"
