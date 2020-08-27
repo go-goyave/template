@@ -21,8 +21,8 @@ func init() {
 // User represents a user.
 type User struct {
 	gorm.Model
-	Name  string `gorm:"type:varchar(100)"`
-	Email string `gorm:"type:varchar(100);unique_index"`
+	Name  string `gorm:"type:char(100)"`
+	Email string `gorm:"type:char(100);unique_index"`
 }
 
 // You may need to test features interacting with your database.
