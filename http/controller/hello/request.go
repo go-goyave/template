@@ -1,6 +1,6 @@
-package echorequest
+package hello
 
-import "github.com/System-Glitch/goyave/v2/validation"
+import "github.com/System-Glitch/goyave/v3/validation"
 
 // Goyave provides a powerful, yet easy way to validate all incoming data, no matter
 // its type or its format, thanks to a large number of validation rules.
@@ -13,7 +13,7 @@ import "github.com/System-Glitch/goyave/v2/validation"
 // This is the validation rules for the "/echo" route, which is simply
 // writing the input as a response.
 var (
-	Echo validation.RuleSet = validation.RuleSet{
+	EchoRequest validation.RuleSet = validation.RuleSet{
 		"text": {"required", "string", "between:3,50"},
 	}
 )

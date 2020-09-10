@@ -2,10 +2,9 @@ package route
 
 import (
 	"goyave_template/http/controller/hello"
-	"goyave_template/http/request/echorequest"
 
-	"github.com/System-Glitch/goyave/v2"
-	"github.com/System-Glitch/goyave/v2/cors"
+	"github.com/System-Glitch/goyave/v3"
+	"github.com/System-Glitch/goyave/v3/cors"
 )
 
 // Routing is an essential part of any Goyave application.
@@ -26,8 +25,8 @@ func Register(router *goyave.Router) {
 	// Register your routes here
 
 	// Route without validation
-	router.Get("/hello", hello.SayHi, nil)
+	router.Get("/hello", hello.SayHi)
 
 	// Route with validation
-	router.Post("/echo", hello.Echo, echorequest.Echo)
+	router.Post("/echo", hello.Echo).Validate(hello.EchoRequest)
 }
