@@ -6,8 +6,8 @@ import (
 	"goyave_template/http/route"
 	"testing"
 
-	"github.com/System-Glitch/goyave/v2"
-	"github.com/System-Glitch/goyave/v2/validation"
+	"github.com/System-Glitch/goyave/v3"
+	"github.com/System-Glitch/goyave/v3/validation"
 )
 
 // Goyave provides an API to ease the unit and functional testing of your application.
@@ -35,6 +35,7 @@ func (suite *HelloTestSuite) TestHello() {
 		suite.Nil(err)
 		suite.NotNil(resp)
 		if resp != nil {
+			defer resp.Body.Close()
 			suite.Equal(200, resp.StatusCode)
 			suite.Equal("Hi!", string(suite.GetBody(resp)))
 		}
@@ -47,6 +48,7 @@ func (suite *HelloTestSuite) TestEcho() {
 		suite.Nil(err)
 		suite.NotNil(resp)
 		if resp != nil { // Expect validation errors (field "text" is required)
+			defer resp.Body.Close()
 			suite.Equal(422, resp.StatusCode)
 			json := map[string]validation.Errors{}
 			err := suite.GetJSONBody(resp, &json)
@@ -64,6 +66,7 @@ func (suite *HelloTestSuite) TestEcho() {
 		suite.Nil(err)
 		suite.NotNil(resp)
 		if resp != nil {
+			defer resp.Body.Close()
 			suite.Equal(200, resp.StatusCode)
 			suite.Equal("hello world", string(suite.GetBody(resp)))
 		}
