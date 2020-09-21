@@ -3,7 +3,7 @@ package model
 import (
 	"github.com/System-Glitch/goyave/v3/database"
 	"github.com/bxcodec/faker/v3"
-	"github.com/jinzhu/gorm"
+	"gorm.io/gorm"
 )
 
 // A model is a structure reflecting a database table structure. An instance of a model
