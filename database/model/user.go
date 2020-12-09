@@ -22,7 +22,7 @@ func init() {
 type User struct {
 	gorm.Model
 	Name  string `gorm:"type:char(100)"`
-	Email string `gorm:"type:char(100);unique_index"`
+	Email string `gorm:"type:char(100);uniqueIndex"`
 }
 
 // You may need to test features interacting with your database.
