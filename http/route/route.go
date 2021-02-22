@@ -19,7 +19,7 @@ import (
 func Register(router *goyave.Router) {
 
 	// Applying default CORS settings (allow all methods and all origins)
-	// Learn more about CORS options here: https://system-glitch.github.io/goyave/guide/advanced/cors.html
+	// Learn more about CORS options here: https://goyave.dev/guide/advanced/cors.html
 	router.CORS(cors.Default())
 
 	// Register your routes here

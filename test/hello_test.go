@@ -23,7 +23,7 @@ import (
 //
 // This setup is done by the function `goyave.RunTest`, so you shouldn't run your test suites using testify's `suite.Run()` function.
 //
-// Learn more about testing here: https://system-glitch.github.io/goyave/guide/advanced/testing.html
+// Learn more about testing here: https://goyave.dev/guide/advanced/testing.html
 
 type HelloTestSuite struct { // Create a test suite for the Hello controller
 	goyave.TestSuite

@@ -1,7 +1,7 @@
 package validation
 
 // If none of the available validation rules satisfy your needs, you can implement custom validation rules.
-// https://system-glitch.github.io/goyave/guide/basics/validation.html#custom-rules
+// https://goyave.dev/guide/basics/validation.html#custom-rules
 
 // import "github.com/System-Glitch/goyave/v3/validation"
 

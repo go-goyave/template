@@ -11,7 +11,7 @@ import (
 // Models are usually just normal Golang structs, basic Go types, or pointers of them.
 // "sql.Scanner" and "driver.Valuer" interfaces are also supported.
 
-// Learn more here: https://system-glitch.github.io/goyave/guide/basics/database.html#models
+// Learn more here: https://goyave.dev/guide/basics/database.html#models
 
 func init() {
 	// All models should be registered in an "init()" function inside their model file.
@@ -31,7 +31,7 @@ type User struct {
 //
 // "database.Generator" is an alias for "func() interface{}"
 //
-// Learn more here: https://system-glitch.github.io/goyave/guide/advanced/testing.html#database-testing
+// Learn more here: https://goyave.dev/guide/advanced/testing.html#database-testing
 
 // UserGenerator generator function for the User model.
 // Generate users using the following:
