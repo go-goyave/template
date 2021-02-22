@@ -3,7 +3,7 @@ package model
 import (
 	"github.com/System-Glitch/goyave/v3/database"
 	"github.com/bxcodec/faker/v3"
-	"github.com/jinzhu/gorm"
+	"gorm.io/gorm"
 )
 
 // A model is a structure reflecting a database table structure. An instance of a model
@@ -22,7 +22,7 @@ func init() {
 type User struct {
 	gorm.Model
 	Name  string `gorm:"type:char(100)"`
-	Email string `gorm:"type:char(100);unique_index"`
+	Email string `gorm:"type:char(100);uniqueIndex"`
 }
 
 // You may need to test features interacting with your database.
