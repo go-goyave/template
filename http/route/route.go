@@ -1,7 +1,7 @@
 package route
 
 import (
-	"goyave_template/http/controller/hello"
+	"goyave.dev/template/http/controller/hello"
 
 	"github.com/System-Glitch/goyave/v3"
 	"github.com/System-Glitch/goyave/v3/cors"

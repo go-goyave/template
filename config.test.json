@@ -1,6 +1,6 @@
 {
     "app": {
-        "name": "goyave_template",
+        "name": "goyave.dev/template",
         "environment": "test",
         "debug": false,
         "defaultLanguage": "en-US"

@@ -1,9 +1,10 @@
 package main
 
 import (
-	"goyave_template/http/route"
-	_ "goyave_template/http/validation"
 	"os"
+
+	"goyave.dev/template/http/route"
+	_ "goyave.dev/template/http/validation"
 
 	"github.com/System-Glitch/goyave/v3"
 	// Import the appropriate GORM dialect for the database you're using.

@@ -1,4 +1,4 @@
-module goyave_template
+module goyave.dev/template
 
 go 1.13
 

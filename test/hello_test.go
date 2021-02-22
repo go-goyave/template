@@ -3,8 +3,9 @@ package test
 import (
 	"bytes"
 	"encoding/json"
-	"goyave_template/http/route"
 	"testing"
+
+	"goyave.dev/template/http/route"
 
 	"github.com/System-Glitch/goyave/v3"
 	"github.com/System-Glitch/goyave/v3/validation"

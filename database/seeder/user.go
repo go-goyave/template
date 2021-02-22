@@ -1,7 +1,7 @@
 package seeder
 
 import (
-	"goyave_template/database/model"
+	"goyave.dev/template/database/model"
 
 	"github.com/System-Glitch/goyave/v3/database"
 	"github.com/bxcodec/faker/v3"
