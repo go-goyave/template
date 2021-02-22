@@ -13,7 +13,7 @@ A template project to get started with the [Goyave](https://github.com/System-Gl
 
 First, make your own configuration for your local environment. You can copy `config.example.json` to `config.json`.
 
-Run `go run kernel.go` in your project's directory to start the server, then try to request the `hello` route.
+Run `go run main.go` in your project's directory to start the server, then try to request the `hello` route.
 ```
 $ curl http://localhost:8080/hello
 Hi!
