@@ -13,7 +13,7 @@ import "github.com/System-Glitch/goyave/v3/validation"
 // This is the validation rules for the "/echo" route, which is simply
 // writing the input as a response.
 var (
-	EchoRequest validation.RuleSet = validation.RuleSet{
+	EchoRequest = validation.RuleSet{
 		"text": {"required", "string", "between:3,50"},
 	}
 )
