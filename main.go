@@ -6,12 +6,12 @@ import (
 	"goyave.dev/template/http/route"
 	_ "goyave.dev/template/http/validation"
 
-	"github.com/System-Glitch/goyave/v3"
+	"goyave.dev/goyave/v3"
 	// Import the appropriate GORM dialect for the database you're using.
-	// _ "github.com/System-Glitch/goyave/v3/database/dialect/mysql"
-	// _ "github.com/System-Glitch/goyave/v3/database/dialect/postgres"
-	// _ "github.com/System-Glitch/goyave/v3/database/dialect/sqlite"
-	// _ "github.com/System-Glitch/goyave/v3/database/dialect/mssql"
+	// _ "goyave.dev/goyave/v3/database/dialect/mysql"
+	// _ "goyave.dev/goyave/v3/database/dialect/postgres"
+	// _ "goyave.dev/goyave/v3/database/dialect/sqlite"
+	// _ "goyave.dev/goyave/v3/database/dialect/mssql"
 )
 
 func main() {

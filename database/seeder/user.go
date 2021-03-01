@@ -3,8 +3,8 @@ package seeder
 import (
 	"goyave.dev/template/database/model"
 
-	"github.com/System-Glitch/goyave/v3/database"
 	"github.com/bxcodec/faker/v3"
+	"goyave.dev/goyave/v3/database"
 )
 
 // Seeders are functions which create a number of random records in the database

@@ -3,8 +3,8 @@ package route
 import (
 	"goyave.dev/template/http/controller/hello"
 
-	"github.com/System-Glitch/goyave/v3"
-	"github.com/System-Glitch/goyave/v3/cors"
+	"goyave.dev/goyave/v3"
+	"goyave.dev/goyave/v3/cors"
 )
 
 // Routing is an essential part of any Goyave application.
