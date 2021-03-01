@@ -1,10 +1,10 @@
 package middleware
 
-import "github.com/System-Glitch/goyave/v3"
+import "goyave.dev/goyave/v3"
 
 // Middleware are handlers executed before the controller handler.
 // They are a convenient way to filter, intercept or alter HTTP requests entering your application.
-// Learn more here: https://system-glitch.github.io/goyave/guide/basics/middleware.html
+// Learn more here: https://goyave.dev/guide/basics/middleware.html
 
 // MyCustomMiddleware is an example middleware.
 //

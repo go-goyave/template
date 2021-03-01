@@ -3,11 +3,12 @@ package test
 import (
 	"bytes"
 	"encoding/json"
-	"goyave_template/http/route"
 	"testing"
 
-	"github.com/System-Glitch/goyave/v3"
-	"github.com/System-Glitch/goyave/v3/validation"
+	"goyave.dev/template/http/route"
+
+	"goyave.dev/goyave/v3"
+	"goyave.dev/goyave/v3/validation"
 )
 
 // Goyave provides an API to ease the unit and functional testing of your application.
@@ -23,7 +24,7 @@ import (
 //
 // This setup is done by the function `goyave.RunTest`, so you shouldn't run your test suites using testify's `suite.Run()` function.
 //
-// Learn more about testing here: https://system-glitch.github.io/goyave/guide/advanced/testing.html
+// Learn more about testing here: https://goyave.dev/guide/advanced/testing.html
 
 type HelloTestSuite struct { // Create a test suite for the Hello controller
 	goyave.TestSuite

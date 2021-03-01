@@ -1,10 +1,10 @@
 package seeder
 
 import (
-	"goyave_template/database/model"
+	"goyave.dev/template/database/model"
 
-	"github.com/System-Glitch/goyave/v3/database"
 	"github.com/bxcodec/faker/v3"
+	"goyave.dev/goyave/v3/database"
 )
 
 // Seeders are functions which create a number of random records in the database
@@ -15,7 +15,7 @@ import (
 // For example, the "seeder.User" should only seed the "users" table.
 // Moreover, seeders should have the same name as the model they are using.
 //
-// Learn more here: https://system-glitch.github.io/goyave/guide/advanced/testing.html#seeders
+// Learn more here: https://goyave.dev/guide/advanced/testing.html#seeders
 
 // User seeder for users. Generate and save 10 users in the database.
 func User() {
