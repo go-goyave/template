@@ -7,8 +7,8 @@ import (
 
 	"goyave.dev/template/http/route"
 
-	"goyave.dev/goyave/v3"
-	"goyave.dev/goyave/v3/validation"
+	"goyave.dev/goyave/v4"
+	"goyave.dev/goyave/v4/validation"
 )
 
 // Goyave provides an API to ease the unit and functional testing of your application.
@@ -57,7 +57,7 @@ func (suite *HelloTestSuite) TestEcho() {
 			if err == nil {
 				textErrors, ok := json["validationError"]["text"]
 				suite.True(ok)
-				suite.Equal(2, len(textErrors))
+				suite.Equal(2, len(textErrors.Errors))
 			}
 		}
 

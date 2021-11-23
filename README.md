@@ -1,12 +1,12 @@
 # Goyave Template
 
-A template project to get started with the [Goyave](https://github.com/System-Glitch/goyave) framework.
+A template project to get started with the [Goyave](https://github.com/go-goyave/goyave) framework.
 
 ## Getting Started
 
 ### Requirements
 
-- Go 1.13+
+- Go 1.16+
 - Go modules
 
 ### Running the project
@@ -31,7 +31,7 @@ The Goyave framework has an extensive documentation covering in-depth subjects a
 
 <a href="https://goyave.dev/guide/installation"><h3 align="center">Read the documentation</h3></a>
 
-<a href="https://pkg.go.dev/goyave.dev/goyave/v3"><h3 align="center">pkg.go.dev</h3></a>
+<a href="https://pkg.go.dev/goyave.dev/goyave/v4"><h3 align="center">pkg.go.dev</h3></a>
 
 ## Contributing
 

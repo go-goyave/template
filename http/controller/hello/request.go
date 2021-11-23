@@ -1,6 +1,6 @@
 package hello
 
-import "goyave.dev/goyave/v3/validation"
+import "goyave.dev/goyave/v4/validation"
 
 // Goyave provides a powerful, yet easy way to validate all incoming data, no matter
 // its type or its format, thanks to a large number of validation rules.
@@ -14,6 +14,6 @@ import "goyave.dev/goyave/v3/validation"
 // writing the input as a response.
 var (
 	EchoRequest = validation.RuleSet{
-		"text": {"required", "string", "between:3,50"},
+		"text": validation.List{"required", "string", "between:3,50"},
 	}
 )

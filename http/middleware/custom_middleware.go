@@ -1,6 +1,6 @@
 package middleware
 
-import "goyave.dev/goyave/v3"
+import "goyave.dev/goyave/v4"
 
 // Middleware are handlers executed before the controller handler.
 // They are a convenient way to filter, intercept or alter HTTP requests entering your application.

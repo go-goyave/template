@@ -4,7 +4,7 @@ import (
 	"goyave.dev/template/database/model"
 
 	"github.com/bxcodec/faker/v3"
-	"goyave.dev/goyave/v3/database"
+	"goyave.dev/goyave/v4/database"
 )
 
 // Seeders are functions which create a number of random records in the database
