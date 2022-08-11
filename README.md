@@ -6,7 +6,7 @@ A template project to get started with the [Goyave](https://github.com/go-goyave
 
 ### Requirements
 
-- Go 1.16+
+- Go 1.17+
 - Go modules
 
 ### Running the project
@@ -42,10 +42,6 @@ I have many ideas for the future of Goyave. I would be infinitely grateful to wh
 You can support me on Github Sponsor or Patreon.
 
 <a href="https://github.com/sponsors/System-Glitch">❤ Sponsor me!</a>
-
-<a href="https://www.patreon.com/bePatron?u=25997573">
-    <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
-</a>
 
 ## License
 

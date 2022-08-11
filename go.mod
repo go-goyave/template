@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/bxcodec/faker/v3 v3.8.0
 	gorm.io/gorm v1.23.6
-	goyave.dev/goyave/v4 v4.4.2
+	goyave.dev/goyave/v4 v4.4.3
 )
 
 require (
