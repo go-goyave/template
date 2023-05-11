@@ -6,8 +6,7 @@ A template project to get started with the [Goyave](https://github.com/go-goyave
 
 ### Requirements
 
-- Go 1.17+
-- Go modules
+- Go 1.18
 
 ### Running the project
 
