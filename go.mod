@@ -1,23 +1,22 @@
 module goyave.dev/template
 
-go 1.18
+go 1.20
 
 require (
 	github.com/bxcodec/faker/v3 v3.8.1
-	gorm.io/gorm v1.25.1
-	goyave.dev/goyave/v4 v4.4.11
+	gopkg.in/guregu/null.v4 v4.0.0
+	gorm.io/gorm v1.25.2
+	goyave.dev/goyave/v5 v5.0.0-preview1
 )
 
 require (
 	github.com/Code-Hex/uniseg v0.2.0 // indirect
-	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/google/uuid v1.3.0 // indirect
-	github.com/imdario/mergo v0.3.15 // indirect
+	github.com/imdario/mergo v0.3.16 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
-	github.com/kr/pretty v0.1.0 // indirect
-	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/stretchr/testify v1.8.2 // indirect
-	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
+	github.com/mattn/go-sqlite3 v1.14.17 // indirect
+	github.com/samber/lo v1.38.1 // indirect
+	golang.org/x/exp v0.0.0-20230626212559-97b1e661b5df // indirect
+	gorm.io/driver/sqlite v1.5.2 // indirect
 )

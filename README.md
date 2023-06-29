@@ -6,31 +6,18 @@ A template project to get started with the [Goyave](https://github.com/go-goyave
 
 ### Requirements
 
-- Go 1.18
+- Go 1.20
 
 ### Running the project
 
 First, make your own configuration for your local environment. You can copy `config.example.json` to `config.json`.
 
-Run `go run main.go` in your project's directory to start the server, then try to request the `hello` route.
+Run `go run main.go` in your project's directory to start the server, then try to request the `users` route.
 ```
-$ curl http://localhost:8080/hello
-Hi!
+$ curl http://localhost:8080/users
+$ curl http://localhost:8080/users?page=2
+$ curl http://localhost:8080/users?page=2&perPage=100
 ```
-
-There is also an `echo` route, with a basic body validation.
-```
-$ curl -H "Content-Type: application/json" -X POST -d '{"text":"abc 123"}' http://localhost:8080/echo
-abc 123
-```
-
-## Learning Goyave
-
-The Goyave framework has an extensive documentation covering in-depth subjects and teaching you how to run a project using Goyave from setup to deployment.
-
-<a href="https://goyave.dev/guide/installation"><h3 align="center">Read the documentation</h3></a>
-
-<a href="https://pkg.go.dev/goyave.dev/goyave/v4"><h3 align="center">pkg.go.dev</h3></a>
 
 ## Contributing
 
@@ -44,4 +31,4 @@ You can support me on Github Sponsor or Patreon.
 
 ## License
 
-The Goyave framework is MIT Licensed. Copyright © 2019 Jérémy LAMBERT (SystemGlitch)
+The Goyave framework is MIT Licensed. Copyright © 2023 Jérémy LAMBERT (SystemGlitch)
