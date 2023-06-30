@@ -3,7 +3,7 @@ package user
 import (
 	"gorm.io/gorm"
 	"goyave.dev/goyave/v5"
-	"goyave.dev/template/database/model/repository"
+	"goyave.dev/template/database/repository"
 	"goyave.dev/template/service"
 )
 
