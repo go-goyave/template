@@ -19,6 +19,7 @@ type UserController struct {
 
 func (ctrl *UserController) Init(server *goyave.Server) {
 	ctrl.UserService = server.Service(service.User).(*user.Service)
+	ctrl.Component.Init(server)
 }
 
 func (ctrl *UserController) RegisterRoutes(router *goyave.Router) {
