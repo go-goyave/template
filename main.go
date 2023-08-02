@@ -10,6 +10,7 @@ import (
 
 	"goyave.dev/goyave/v5"
 	"goyave.dev/goyave/v5/database"
+	"goyave.dev/goyave/v5/util/errors"
 
 	// Import the appropriate GORM dialect for the database you're using.
 	// _ "goyave.dev/goyave/v5/database/dialect/mysql"
@@ -22,13 +23,13 @@ func main() {
 
 	server, err := goyave.New()
 	if err != nil {
-		fmt.Println(err)
-		os.Exit(err.(*goyave.Error).ExitCode)
+		fmt.Println(err.(*errors.Error).String())
+		os.Exit(1)
 	}
 
 	if err := server.DB().AutoMigrate(&model.User{}); err != nil {
-		server.ErrLogger.Println(err)
-		os.Exit(goyave.ExitDatabaseError)
+		server.ErrLogger.Println(errors.New(err).String())
+		os.Exit(2)
 	}
 	factory := database.NewFactory(model.UserGenerator)
 	factory.Save(server.DB(), 21)
@@ -51,7 +52,7 @@ func main() {
 	server.RegisterRoutes(route.Register)
 
 	if err := server.Start(); err != nil {
-		server.ErrLogger.Println(err)
-		os.Exit(err.(*goyave.Error).ExitCode)
+		server.ErrLogger.Println(err.(*errors.Error).String())
+		os.Exit(3)
 	}
 }
