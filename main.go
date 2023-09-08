@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"goyave.dev/template/database/model"
+	"goyave.dev/template/database/repository"
 	"goyave.dev/template/http/route"
 	"goyave.dev/template/service/user"
 
@@ -28,31 +29,38 @@ func main() {
 	}
 
 	if err := server.DB().AutoMigrate(&model.User{}); err != nil {
-		server.ErrLogger.Println(errors.New(err).String())
+		server.Logger.Error(errors.New(err))
 		os.Exit(2)
 	}
 	factory := database.NewFactory(model.UserGenerator)
 	factory.Save(server.DB(), 21)
 
-	server.Logger.Println("Registering hooks")
+	server.Logger.Info("Registering hooks")
 	server.RegisterSignalHook()
 
 	server.RegisterStartupHook(func(s *goyave.Server) {
-		s.Logger.Printf("Server is listening on %s\n", s.Host())
+		server.Logger.Info("Server is listening", "host", s.Host())
 	})
 
 	server.RegisterShutdownHook(func(s *goyave.Server) {
-		s.Logger.Println("Server is shutting down")
+		s.Logger.Info("Server is shutting down")
 	})
 
-	server.Logger.Println("Registering services")
-	server.RegisterService(&user.Service{})
+	registerServices(server)
 
-	server.Logger.Println("Registering routes")
+	server.Logger.Info("Registering routes")
 	server.RegisterRoutes(route.Register)
 
 	if err := server.Start(); err != nil {
-		server.ErrLogger.Println(err.(*errors.Error).String())
+		server.Logger.Error(err)
 		os.Exit(3)
 	}
+}
+
+func registerServices(server *goyave.Server) {
+	server.Logger.Info("Registering services")
+
+	userRepository := repository.NewUser(server.DB())
+	userService := user.NewService(userRepository)
+	server.RegisterService(userService)
 }
