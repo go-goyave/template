@@ -10,7 +10,10 @@
         "domain": "",
         "port": 8080,
         "httpsPort": 8081,
-        "timeout": 10,
+        "writeTimeout": 10,
+        "readTimeout": 10,
+        "idleTimeout": 20,
+        "websocketTimeout": 10,
         "maxUploadSize": 10,
         "proxy": {
             "protocol": "http",
@@ -29,6 +32,7 @@
         "options": "mode=memory",
         "maxOpenConnections": 20,
         "maxIdleConnections": 20,
+        "maxLifetime": 300,
         "defaultReadQueryTimeout": 20000,
         "defaultWriteQueryTimeout": 40000,
         "config": {
