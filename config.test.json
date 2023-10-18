@@ -8,7 +8,7 @@
     "server": {
         "host": "127.0.0.1",
         "domain": "",
-        "port": 8080,
+        "port": 0,
         "writeTimeout": 10,
         "readTimeout": 10,
         "idleTimeout": 20,
