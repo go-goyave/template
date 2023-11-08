@@ -1,6 +1,7 @@
 package main
 
 import (
+	"embed"
 	"fmt"
 	"os"
 
@@ -12,6 +13,7 @@ import (
 	"goyave.dev/goyave/v5"
 	"goyave.dev/goyave/v5/database"
 	"goyave.dev/goyave/v5/util/errors"
+	"goyave.dev/goyave/v5/util/fsutil"
 
 	// Import the appropriate GORM dialect for the database you're using.
 	// _ "goyave.dev/goyave/v5/database/dialect/mysql"
@@ -20,11 +22,18 @@ import (
 	// _ "goyave.dev/goyave/v5/database/dialect/mssql"
 )
 
+//go:embed resources
+var resources embed.FS
+
 func main() {
 
-	server, err := goyave.New()
+	opts := goyave.Options{
+		LangFS: fsutil.Embed{FS: resources},
+	}
+
+	server, err := goyave.New(opts)
 	if err != nil {
-		fmt.Println(err.(*errors.Error).String())
+		fmt.Fprintln(os.Stderr, err.(*errors.Error).String())
 		os.Exit(1)
 	}
 
