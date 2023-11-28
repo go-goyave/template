@@ -12,7 +12,7 @@
         "writeTimeout": 10,
         "readTimeout": 10,
         "idleTimeout": 20,
-        "websocketTimeout": 10,
+        "websocketCloseTimeout": 10,
         "maxUploadSize": 10,
         "proxy": {
             "protocol": "http",
