@@ -8,7 +8,7 @@ require (
 	github.com/go-faker/faker/v4 v4.2.0
 	gopkg.in/guregu/null.v4 v4.0.0
 	gorm.io/gorm v1.25.5
-	goyave.dev/goyave/v5 v5.0.0-preview6
+	goyave.dev/goyave/v5 v5.0.0-preview6.0.20231128144342-8731d23e248b
 )
 
 require (

@@ -5,13 +5,12 @@ import (
 	"fmt"
 	"os"
 
-	"goyave.dev/template/database/model"
 	"goyave.dev/template/database/repository"
+	"goyave.dev/template/database/seed"
 	"goyave.dev/template/http/route"
 	"goyave.dev/template/service/user"
 
 	"goyave.dev/goyave/v5"
-	"goyave.dev/goyave/v5/database"
 	"goyave.dev/goyave/v5/util/errors"
 	"goyave.dev/goyave/v5/util/fsutil"
 
@@ -37,12 +36,10 @@ func main() {
 		os.Exit(1)
 	}
 
-	if err := server.DB().AutoMigrate(&model.User{}); err != nil {
-		server.Logger.Error(errors.New(err))
-		os.Exit(2)
+	if server.Config().GetString("app.environment") == "localhost" {
+		server.Logger.Info("Seeding database")
+		seed.Seed(server.DB())
 	}
-	factory := database.NewFactory(model.UserGenerator)
-	factory.Save(server.DB(), 21)
 
 	server.Logger.Info("Registering hooks")
 	server.RegisterSignalHook()

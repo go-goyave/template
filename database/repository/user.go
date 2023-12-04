@@ -1,9 +1,12 @@
 package repository
 
 import (
+	"context"
+
 	"gorm.io/gorm"
 	"goyave.dev/goyave/v5/database"
 	"goyave.dev/goyave/v5/util/errors"
+	"goyave.dev/goyave/v5/util/session"
 	"goyave.dev/template/database/model"
 )
 
@@ -20,18 +23,18 @@ func NewUser(db *gorm.DB) *User {
 }
 
 // Paginate returns a paginator after executing it.
-func (r *User) Paginate(page int, pageSize int) (*database.Paginator[*model.User], error) {
+func (r *User) Paginate(ctx context.Context, page int, pageSize int) (*database.Paginator[*model.User], error) {
 	users := []*model.User{}
 
-	paginator := database.NewPaginator(r.DB, page, pageSize, &users)
+	paginator := database.NewPaginator(session.DB(ctx, r.DB), page, pageSize, &users)
 	result := paginator.Find()
 	return paginator, result.Error
 }
 
 // First returns the user identified by the given ID, or `nil`
-func (r *User) First(id int64) (*model.User, error) {
+func (r *User) First(ctx context.Context, id uint) (*model.User, error) {
 	var user *model.User
-	db := r.DB.Where("id", id).First(&user)
+	db := session.DB(ctx, r.DB).Where("id", id).First(&user)
 	var err error
 	if db.Error != nil {
 		err = errors.New(db.Error)
