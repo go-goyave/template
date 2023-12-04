@@ -27,8 +27,8 @@ func (r *User) Paginate(ctx context.Context, page int, pageSize int) (*database.
 	users := []*model.User{}
 
 	paginator := database.NewPaginator(session.DB(ctx, r.DB), page, pageSize, &users)
-	result := paginator.Find()
-	return paginator, result.Error
+	err := paginator.Find()
+	return paginator, err
 }
 
 // First returns the user identified by the given ID, or `nil`
