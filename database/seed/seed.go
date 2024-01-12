@@ -9,6 +9,7 @@ import (
 	"goyave.dev/template/database/model"
 )
 
+// UserGenerator generates a user with a unique email and a random name.
 func UserGenerator() *model.User {
 	user := &model.User{}
 	user.Name = faker.Name()
@@ -19,6 +20,7 @@ func UserGenerator() *model.User {
 	return user
 }
 
+// Seed migrate all the models and populates the database.
 func Seed(db *gorm.DB) {
 	if err := Migrate(db); err != nil {
 		panic(err)
@@ -28,6 +30,7 @@ func Seed(db *gorm.DB) {
 	userFactory.Save(db, 10)
 }
 
+// Migrate auto-migrate all models.
 func Migrate(db *gorm.DB) error {
 	err := db.AutoMigrate(
 		&model.User{},

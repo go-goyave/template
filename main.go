@@ -26,8 +26,15 @@ var resources embed.FS
 
 func main() {
 
+	resources := fsutil.NewEmbed(resources)
+	langFS, err := resources.Sub("resources/lang")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err.(*errors.Error).String())
+		os.Exit(1)
+	}
+
 	opts := goyave.Options{
-		LangFS: fsutil.Embed{FS: resources},
+		LangFS: langFS,
 	}
 
 	server, err := goyave.New(opts)
