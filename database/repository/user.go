@@ -35,9 +35,5 @@ func (r *User) Paginate(ctx context.Context, page int, pageSize int) (*database.
 func (r *User) First(ctx context.Context, id uint) (*model.User, error) {
 	var user *model.User
 	db := session.DB(ctx, r.DB).Where("id", id).First(&user)
-	var err error
-	if db.Error != nil {
-		err = errors.New(db.Error)
-	}
-	return user, err
+	return user, errors.New(db.Error)
 }
