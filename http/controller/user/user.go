@@ -6,7 +6,6 @@ import (
 	"strconv"
 
 	"goyave.dev/goyave/v5"
-	"goyave.dev/goyave/v5/cors"
 	"goyave.dev/goyave/v5/database"
 	"goyave.dev/goyave/v5/util/typeutil"
 	"goyave.dev/template/dto"
@@ -30,7 +29,6 @@ func (ctrl *UserController) Init(server *goyave.Server) {
 
 func (ctrl *UserController) RegisterRoutes(router *goyave.Router) {
 	subrouter := router.Subrouter("/users")
-	subrouter.CORS(cors.Default())
 
 	subrouter.Get("/", ctrl.Index).ValidateQuery(IndexRequest)
 	subrouter.Get("/{userID:[0-9+]}", ctrl.Show)
