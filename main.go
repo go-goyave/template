@@ -56,12 +56,18 @@ func main() {
 
 	if err := server.Start(); err != nil {
 		server.Logger.Error(err)
-		os.Exit(3)
+		os.Exit(2)
 	}
 }
 
 func registerServices(server *goyave.Server) {
 	server.Logger.Info("Registering services")
+
+	// Services represent the Domain/Business layer.
+	// This is where the core logic and value of your application resides.
+	// This function is where you will register your services in the server's
+	// service container to make them accessible to dependents.
+	// https://goyave.dev/basics/services.html#service-container
 
 	// TODO register services
 }
