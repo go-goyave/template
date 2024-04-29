@@ -5,19 +5,15 @@ import (
 	"fmt"
 	"os"
 
-	"goyave.dev/template/database/repository"
-	"goyave.dev/template/database/seed"
 	"goyave.dev/template/http/route"
-	"goyave.dev/template/service/user"
 
 	"goyave.dev/goyave/v5"
 	"goyave.dev/goyave/v5/util/errors"
 	"goyave.dev/goyave/v5/util/fsutil"
-
 	// Import the appropriate GORM dialect for the database you're using.
 	// _ "goyave.dev/goyave/v5/database/dialect/mysql"
 	// _ "goyave.dev/goyave/v5/database/dialect/postgres"
-	_ "goyave.dev/goyave/v5/database/dialect/sqlite"
+	// _ "goyave.dev/goyave/v5/database/dialect/sqlite"
 	// _ "goyave.dev/goyave/v5/database/dialect/mssql"
 )
 
@@ -25,7 +21,6 @@ import (
 var resources embed.FS
 
 func main() {
-
 	resources := fsutil.NewEmbed(resources)
 	langFS, err := resources.Sub("resources/lang")
 	if err != nil {
@@ -41,11 +36,6 @@ func main() {
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err.(*errors.Error).String())
 		os.Exit(1)
-	}
-
-	if server.Config().GetString("app.environment") == "localhost" {
-		server.Logger.Info("Seeding database")
-		seed.Seed(server.DB())
 	}
 
 	server.Logger.Info("Registering hooks")
@@ -73,7 +63,5 @@ func main() {
 func registerServices(server *goyave.Server) {
 	server.Logger.Info("Registering services")
 
-	userRepository := repository.NewUser(server.DB())
-	userService := user.NewService(userRepository)
-	server.RegisterService(userService)
+	// TODO register services
 }
