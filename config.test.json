@@ -41,7 +41,7 @@
             "prepareStmt": true,
             "disableNestedTransaction": false,
             "allowGlobalUpdate": false,
-            "disableAutomaticPing": false,
+            "disableAutomaticPing": true,
             "disableForeignKeyConstraintWhenMigrating": false
         }
     }
