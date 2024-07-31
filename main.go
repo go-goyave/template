@@ -15,6 +15,7 @@ import (
 	// _ "goyave.dev/goyave/v5/database/dialect/postgres"
 	// _ "goyave.dev/goyave/v5/database/dialect/sqlite"
 	// _ "goyave.dev/goyave/v5/database/dialect/mssql"
+	// _ "goyave.dev/goyave/v5/database/dialect/clickhouse"
 )
 
 //go:embed resources
