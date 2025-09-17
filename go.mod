@@ -3,8 +3,8 @@ module goyave.dev/template
 go 1.24.6
 
 require (
-	gorm.io/gorm v1.30.2
-	goyave.dev/goyave/v5 v5.8.1
+	gorm.io/gorm v1.31.0
+	goyave.dev/goyave/v5 v5.9.0
 )
 
 require (
@@ -13,6 +13,6 @@ require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
 	github.com/samber/lo v1.51.0 // indirect
-	golang.org/x/text v0.28.0 // indirect
+	golang.org/x/text v0.29.0 // indirect
 	goyave.dev/copier v0.4.4 // indirect
 )
