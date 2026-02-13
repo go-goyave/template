@@ -162,5 +162,5 @@ gorm.io/gorm v1.31.1 h1:7CA8FTFz/gRfgqgpeKIBcervUn3xSyPUmr6B2WXJ7kg=
 gorm.io/gorm v1.31.1/go.mod h1:XyQVbO2k6YkOis7C2437jSit3SsDK72s7n7rsSHd+Gs=
 goyave.dev/copier v0.4.4 h1:yK+2h1udZVDJXzwNLMv7PCxfb7XM94awBniL2LqShAw=
 goyave.dev/copier v0.4.4/go.mod h1:zjuGXlfkYsx9cTpQ9uL0304/ouASGCrrfJ5hpZmtxpM=
-goyave.dev/goyave/v5 v5.11.2 h1:pMi/sGfbSnsTXHTxibtk2IZj98OZHjM1b9xefTrYnoc=
-goyave.dev/goyave/v5 v5.11.2/go.mod h1:NhwHIAllOSorV2TsJjl+dz3KH3afOYQIUmaCj/E6GdI=
+goyave.dev/goyave/v5 v5.11.3 h1:ITSqLkDAX7iTePpOdjRneRTLXECWT2UHZdTiPQ94pF8=
+goyave.dev/goyave/v5 v5.11.3/go.mod h1:NhwHIAllOSorV2TsJjl+dz3KH3afOYQIUmaCj/E6GdI=
