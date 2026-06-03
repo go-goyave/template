@@ -4,7 +4,7 @@ go 1.25.10
 
 require (
 	gorm.io/gorm v1.31.1
-	goyave.dev/goyave/v5 v5.11.3
+	goyave.dev/goyave/v5 v5.12.1
 )
 
 require (
@@ -12,7 +12,7 @@ require (
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
-	github.com/samber/lo v1.52.0 // indirect
-	golang.org/x/text v0.33.0 // indirect
+	github.com/samber/lo v1.53.0 // indirect
+	golang.org/x/text v0.37.0 // indirect
 	goyave.dev/copier v0.4.4 // indirect
 )
