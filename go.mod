@@ -4,7 +4,7 @@ go 1.26.0
 
 require (
 	gorm.io/gorm v1.31.2
-	goyave.dev/goyave/v5 v5.12.3
+	goyave.dev/goyave/v5 v5.12.4
 )
 
 require (
