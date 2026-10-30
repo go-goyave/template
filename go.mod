@@ -1,10 +1,10 @@
 module goyave.dev/template
 
-go 1.26.0
+go 1.26.10
 
 require (
 	gorm.io/gorm v1.31.2
-	goyave.dev/goyave/v5 v5.12.6
+	goyave.dev/goyave/v5 v5.12.7
 )
 
 require (
